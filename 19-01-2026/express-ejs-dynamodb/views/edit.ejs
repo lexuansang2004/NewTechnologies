@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-xl shadow w-full max-w-md">
+
+        <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">
+            Edit Product
+        </h2>
+
+        <form action="/update/<%= product.id %>" method="post" class="space-y-4">
+
+            <input name="name" value="<%= product.name %>" class="w-full border p-2 rounded" placeholder="Name">
+
+            <input name="price" value="<%= product.price %>" class="w-full border p-2 rounded" placeholder="Price">
+
+            <input name="quantity" value="<%= product.quantity %>" class="w-full border p-2 rounded" placeholder="Quantity">
+
+            <div class="flex justify-between">
+                <a href="/" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">
+        Back
+      </a>
+
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        Update
+      </button>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
