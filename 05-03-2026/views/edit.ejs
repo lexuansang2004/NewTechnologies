@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-10">
+
+<h1 class="text-3xl font-bold mb-6">Edit Product</h1>
+
+<form action="/edit/<%= product.id %>" method="POST"
+class="bg-white p-6 rounded shadow w-1/2">
+
+<input name="name"
+value="<%= product.name %>"
+class="border p-2 w-full mb-4"/>
+
+<input name="price"
+value="<%= product.price %>"
+class="border p-2 w-full mb-4"/>
+
+<input name="url_image"
+value="<%= product.url_image %>"
+class="border p-2 w-full mb-4"/>
+
+<button class="bg-green-500 text-white px-4 py-2 rounded">
+Update
+</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-10">
+
+<h1 class="text-3xl font-bold mb-5">Product Manager</h1>
+
+<a href="/add"
+class="bg-blue-500 text-white px-4 py-2 rounded">
+Add Product
+</a>
+
+<table class="mt-5 w-full bg-white shadow rounded">
+
+<thead class="bg-gray-200">
+<tr>
+<th class="p-3">Name</th>
+<th class="p-3">Price</th>
+<th class="p-3">Image</th>
+<th class="p-3">Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<% products.forEach(p => { %>
+
+<tr class="border-t">
+
+<td class="p-3"><%= p.name %></td>
+
+<td class="p-3">$<%= p.price %></td>
+
+<td class="p-3">
+<img src="<%= p.url_image %>" width="80">
+</td>
+
+<td class="p-3 space-x-3">
+
+<a href="/edit/<%= p.id %>"
+class="text-blue-500">
+Edit
+</a>
+
+<a href="/delete/<%= p.id %>"
+class="text-red-500">
+Delete
+</a>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</tbody>
+
+</table>
+
+</body>
+</html>
