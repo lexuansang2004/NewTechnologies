@@ -1,0 +1,37 @@
+<h1>Edit Product</h1>
+
+<form action="/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="oldImage" value="<%= product.image %>">
+
+Name
+
+<input name="name" value="<%= product.name %>">
+
+Price
+
+<input name="price" value="<%= product.price %>">
+
+Quantity
+
+<input name="quantity" value="<%= product.quantity %>">
+
+Current Image
+
+<% if (product.image) { %>
+
+<img src="<%= product.image %>" width="120">
+
+<% } else { %>
+
+No Image
+
+<% } %>
+
+Change Image
+
+<input type="file" name="image">
+
+<button>Update</button>
+
+</form>
