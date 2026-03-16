@@ -1,0 +1,28 @@
+<h2 class="text-3xl text-[#66FCF1] mb-6 font-bold">
+    Product Detail
+</h2>
+
+<div class="bg-[#1F2833] p-6 rounded-lg shadow">
+
+    <img src="<%= product.url_image %>" class="w-60 rounded mb-4">
+
+    <p class="mb-2">
+        <b>Name:</b>
+        <%= product.name %>
+    </p>
+
+    <p class="mb-2">
+        <b>Price:</b> $
+        <%= product.price %>
+    </p>
+
+    <p class="mb-2">
+        <b>Stock:</b>
+        <%= product.unit_in_stock %>
+    </p>
+
+    <a href="/" class="inline-block mt-4 bg-[#66FCF1] text-black px-5 py-2 rounded">
+    Back
+    </a>
+
+</div>

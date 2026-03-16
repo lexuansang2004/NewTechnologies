@@ -1,0 +1,49 @@
+<h2 class="text-3xl text-[#66FCF1] mb-6 font-bold">
+    Add Product
+</h2>
+
+<form action="/add" method="POST" enctype="multipart/form-data">
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Product Name</label>
+
+        <input name="name" required class="w-full p-3 rounded bg-[#1F2833] border border-[#45A29E]">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Price</label>
+
+        <input type="number" name="price" required class="w-full p-3 rounded bg-[#1F2833] border border-[#45A29E]">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Stock</label>
+
+        <input type="number" name="unit_in_stock" required class="w-full p-3 rounded bg-[#1F2833] border border-[#45A29E]">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Image</label>
+
+        <input type="file" name="image" onchange="previewImage(event)" class="w-full" />
+
+        <img id="preview" class="w-40 mt-4 hidden rounded">
+
+    </div>
+
+    <button class="bg-[#66FCF1] text-black px-6 py-2 rounded hover:bg-[#45A29E]">
+    Add Product
+    </button>
+
+    <a href="/" class="ml-4 text-[#66FCF1]">
+    Cancel
+    </a>
+
+</form>

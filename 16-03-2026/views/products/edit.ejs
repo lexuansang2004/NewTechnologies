@@ -1,0 +1,51 @@
+<h2 class="text-3xl text-[#66FCF1] mb-6 font-bold">
+    Edit Product
+</h2>
+
+<form action="/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Product Name</label>
+
+        <input name="name" value="<%= product.name %>" class="w-full p-3 rounded bg-[#1F2833] border border-[#45A29E]">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Price</label>
+
+        <input type="number" name="price" value="<%= product.price %>" class="w-full p-3 rounded bg-[#1F2833] border border-[#45A29E]">
+
+    </div>
+
+    <div class="mb-4">
+
+        <label class="block mb-2">Stock</label>
+
+        <input type="number" name="unit_in_stock" value="<%= product.unit_in_stock %>" class="w-full p-3 rounded bg-[#1F2833] border border-[#45A29E]">
+
+    </div>
+
+    <div class="mb-4">
+
+        <p class="mb-2">Current Image</p>
+
+        <img src="<%= product.url_image %>" class="w-40 rounded mb-4">
+
+        <input type="file" name="image" onchange="previewImage(event)">
+
+        <img id="preview" class="w-40 mt-4 hidden rounded">
+
+    </div>
+
+    <button class="bg-yellow-500 text-black px-6 py-2 rounded">
+    Update
+    </button>
+
+    <a href="/" class="ml-4 text-[#66FCF1]">
+    Cancel
+    </a>
+
+</form>
